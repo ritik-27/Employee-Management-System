@@ -37,9 +37,9 @@ function Dashboard() {
                 Swal.fire({
                     icon: 'success',
                     title: 'Deleted!',
-                    text: `${employee.firstName} ${employee.lastName}'s data has been deleted.`,
+                    text: `${employee.firstName}'s data has been deleted.`,
                     showConfirmButton: false,
-                    timer: 1500,
+                    timer: 2000,
                 });
 
                 const newList = employees.filter((employee) => employee.id !== id)
