@@ -27,6 +27,8 @@ function Dashboard() {
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
             showCancelButton: true,
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!',
             cancelButtonText: 'No, cancel!',
         }).then(result => {

@@ -10,25 +10,29 @@ function Header(props) {
             text: "You won't be able to revert this!",
             showCancelButton: true,
             confirmButtonText: 'Yes, delete all!',
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#d33',
             cancelButtonText: 'No, cancel!',
-        }).then(() => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Deleted!',
-                text: `All Employee's data has been deleted.`,
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            setEmployees([])
-        })
+        }).then(result => {
+            if (result.value) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Deleted!',
+                    text: `All Employee's data has been deleted.`,
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                setEmployees([]);
+            }
+        });
     }
     return (
         <>
             <header>
                 <h2>Employee Management System</h2>
                 <div style={{ marginTop: '30px', marginBottom: '18px' }}>
-                    <button onClick={() => { setisAdding(true) }} className='round-button'>Add Employee</button>
-                    <button onClick={handleDelete} className='round-button'>Delete All</button>
+                    <button style={{ marginRight: '5px' }} onClick={() => { setisAdding(true) }} className='button'>Add Employee</button>
+                    <button onClick={handleDelete} className='accent-button'>Delete All</button>
                 </div>
             </header>
         </>
