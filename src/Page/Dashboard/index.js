@@ -17,7 +17,6 @@ function Dashboard() {
 
     const handleEdit = (id) => {
         const [employee] = employees.filter(employee => employee.id === id);
-
         setSelectedEmployee(employee);
         setIsEditing(true);
     }
@@ -56,6 +55,7 @@ function Dashboard() {
                 <>
                     <Header
                         setisAdding={setisAdding}
+                        setEmployees={setEmployees}
                     />
                     <List
                         employees={employees}
