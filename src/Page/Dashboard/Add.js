@@ -18,11 +18,11 @@ function Add({ employees, setEmployees, setisAdding }) {
         e.preventDefault();
 
         // If All the fields are empty
-        if (!firstName || !lastName || !email || !salary || !date) {
+        if (!firstName ||  !email || !salary ) {
             return Swal.fire({
                 icon: 'error',
                 title: 'Error!',
-                text: 'All fields are required.',
+                text: '* marked fields are required.',
                 showConfirmButton: true
             });
         }
@@ -55,7 +55,7 @@ function Add({ employees, setEmployees, setisAdding }) {
                 <h2>Add Employee</h2>
 
                 {/* First Name */}
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName">First Name *</label>
                 <input
                     id='firstName'
                     type="text"
@@ -74,7 +74,7 @@ function Add({ employees, setEmployees, setisAdding }) {
                 />
 
                 {/* Email */}
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email *</label>
                 <input
                     id="email"
                     type="email"
@@ -84,7 +84,7 @@ function Add({ employees, setEmployees, setisAdding }) {
                 />
 
                 {/* Salary */}
-                <label htmlFor="salary">Salary ($)</label>
+                <label htmlFor="salary">Salary ($) *</label>
                 <input
                     id="salary"
                     type="number"
