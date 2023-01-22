@@ -17,11 +17,11 @@ function Edit(props) {
         e.preventDefault();
 
         // If All the fields are empty
-        if (!firstName || !lastName || !email || !salary || !date) {
+        if (!firstName || !email || !salary ) {
             return Swal.fire({
                 icon: 'error',
                 title: 'Error!',
-                text: 'All fields are required.',
+                text: '* marked fields are required.',
                 showConfirmButton: true
             });
         }
@@ -61,7 +61,7 @@ function Edit(props) {
                 <h2>Edit Employee</h2>
 
                 {/* First Name */}
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName">First Name *</label>
                 <input
                     id='firstName'
                     type="text"
@@ -79,7 +79,7 @@ function Edit(props) {
                 />
 
                 {/* Email */}
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email *</label>
                 <input
                     id="email"
                     type="email"
@@ -89,7 +89,7 @@ function Edit(props) {
                 />
 
                 {/* Salary */}
-                <label htmlFor="salary">Salary ($)</label>
+                <label htmlFor="salary">Salary ($) *</label>
                 <input
                     id="salary"
                     type="number"
