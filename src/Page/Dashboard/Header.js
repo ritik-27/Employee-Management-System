@@ -29,7 +29,7 @@ function Header(props) {
     return (
         <>
             <header>
-                <h2>Employee Management System</h2>
+                <h2>WorkForce Hub</h2>
                 <div style={{ marginTop: '30px', marginBottom: '18px' }}>
                     <button style={{ marginRight: '5px' }} onClick={() => { setisAdding(true) }} className='button'>Add Employee</button>
                     <button onClick={handleDelete} className='accent-button'>Delete All</button>
